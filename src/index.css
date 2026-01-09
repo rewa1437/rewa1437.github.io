@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Nurse Holiday Font */
+@font-face {
+  font-family: 'Nurse Holiday';
+  src: url('/fonts/Nurse-Holiday-BF6938327b23516.otf') format('opentype'),
+       url('/fonts/Nurse-Holiday-BF6938327b23516.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: fixed;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+}
+
+.font-nurse-holiday {
+  font-family: 'Nurse Holiday', cursive, sans-serif;
+}
+
+/* Apply Nurse Holiday font to English characters automatically */
+.font-nurse-holiday *,
+.font-nurse-holiday {
+  font-family: 'Nurse Holiday', cursive, sans-serif;
+}
+
+/* Utility class for English text only */
+.english-text {
+  font-family: 'Nurse Holiday', cursive, sans-serif;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Flip Card Styles */
+.perspective-1000 {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+/* Performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize animations */
+.motion-div,
+[class*="motion"] {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
