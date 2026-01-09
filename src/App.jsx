@@ -39,7 +39,7 @@ function App() {
   const MAX_ATTEMPTS = 5  // จำนวนครั้งสูงสุดที่สามารถลองได้
 
   // วันที่ 10 มกราคม 2569 (2026) เวลา 00:00:00
-  const targetDate = new Date('2026-01-10T00:00:00+07:00')
+  const targetDate = new Date('2026-01-09T00:00:00+07:00')
 
   useEffect(() => {
     const checkDate = () => {
